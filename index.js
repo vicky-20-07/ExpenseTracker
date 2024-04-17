@@ -50,7 +50,7 @@ app.post('/addExpense', async (req, res) => {
     }
 });
 
-app.post('/getExpense', async (req, res) => {
+app.get('/getExpense', async (req, res) => {
     try {
         const expenseDetails = await Expense.find();
         res.status(200).json(expenseDetails);
@@ -84,7 +84,7 @@ app.post('/addUser', async (req, res) => {
     }
 });
 
-app.post('/getUser', async (req, res) => {
+app.get('/getUser', async (req, res) => {
     try {
         const users = await User.find();
         res.json(users);
